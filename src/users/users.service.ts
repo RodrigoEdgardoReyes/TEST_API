@@ -13,7 +13,7 @@ export class UsersService {
     @InjectRepository(Role) private readonly roleRepository: Repository<Role>,
   ) { }
 
-  // Metodo crear 
+  // Crear usuario 
   async create(creaateUserDto: CreateUserDto) {
     try {
       const role = await this.roleRepository.findOne({
