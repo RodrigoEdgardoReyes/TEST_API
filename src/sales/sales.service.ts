@@ -20,6 +20,7 @@ export class SalesService {
     @InjectRepository(Product) private readonly productRepository: Repository<Product>,
   ) { }
 
+  // Crear venta
   async create(createSaleDto: CreateSaleDto, createDetailSaleDto: CreateDetailSaleDto) {  
     try {
       // Busco el usuario en la base de datos usando el userId proporcionado en el DTO
